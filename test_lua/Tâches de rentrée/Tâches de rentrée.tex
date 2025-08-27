@@ -1,0 +1,52 @@
+% !TEX program = lualatex
+\documentclass[10pt,a5paper]{article}
+
+% -------- LuaLaTeX : polices et langue --------
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Tex Gyre Heros}
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+% -------- Mise en page --------
+\usepackage[a5paper,margin=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+
+% -------- Mathématiques --------
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{siunitx}
+\sisetup{locale=FR}
+
+\usepackage{enumitem}
+\usepackage{ProfCollege}
+
+% Définition d'une nouvelle liste "todolist"
+\newlist{todolist}{itemize}{1}
+\setlist[todolist]{label=$\square$}
+
+% -------- Divers --------
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\section*{Tâches de rentrée}
+
+Le plus rapidement possible :
+
+\begin{todolist}
+    \item compléter et rendre le coupon \emph{Autorisations entrée/sortie}
+\end{todolist}
+
+Pour le vendredi 13 septembre au plus tard :
+\begin{todolist}
+\item  compléter et rendre le coupon \emph{Réunion parents mardi 17/9}
+\item  compléter les 2e et 4e de couverture du \emph{carnet de liaison} (coller une \emph{photo})
+\item  lire et signer, élève et parent(s) le \emph{règlement intérieur} dans le carnet de liaison
+\item  compléter et rendre le coupon \emph{Médicaments}
+\item  faire signer et rendre la fiche \emph{État des manuels scolaires}
+\end{todolist}
+Signature(s):
+
+\end{document}

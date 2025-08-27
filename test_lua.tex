@@ -1,0 +1,99 @@
+% !TEX program = lualatex
+\documentclass[12pt,a5paper]{article}
+
+% -------- LuaLaTeX : polices et langue --------
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Tex Gyre Heros}
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+% -------- Mise en page --------
+\usepackage[a5paper,margin=1cm]{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+
+% -------- Mathématiques --------
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{siunitx}
+\sisetup{locale=FR}
+
+% -------- Profcollege --------
+\usepackage{ProfCollege}
+
+% -------- Titlesec ---------
+\usepackage{titlesec}
+\titleformat{\section}
+  [block]
+  {\sffamily\bfseries\centering\Large}
+  {Leçon \thesection~− }   % ajoute un point
+  {0em}
+  {}
+  [\titlerule\vspace{0.5em}]  
+
+% -------- Exercices et corrigés --------
+\usepackage{xsim}
+
+% Faire que le numéro de l'exercice inclut le numéro de section
+\renewcommand{\theexercise}{\thesection E\arabic{exercise}}
+
+% Définir un nouveau modèle simple pour l'affichage du titre
+\DeclareExerciseEnvironmentTemplate{titre-simple}
+  {
+    \noindent\textbf{\theexercise}\par\vspace{0.3em}
+  }
+  {
+    \par\vspace{1em}
+  }
+
+% Appliquer notre modèle simple à tous les exercices
+\xsimsetup{
+  exercise/template = titre-simple
+}
+
+% -------- Divers --------
+\setlength{\parindent}{0pt}
+% \setlength{\parskip}{6pt}
+
+% Générer la liste Lua dans une macro
+\newcommand{\genEquations}{
+\begin{itemize}
+\directlua{
+  % math.randomseed(os.time())
+  math.randomseed(123)
+  for i=1,10 do
+    local a = math.random(2,7)
+    local b = math.random(2,7)
+    local c = math.random(2,7)
+    local d = math.random(2,7)
+    if a==c then a=a+1 end
+    tex.sprint("\\item équation " ..i.. " : $" .. a .. "x + " .. b .. " = " .. c .. "x + " .. d .. "$")
+  end
+}
+\end{itemize}
+}
+
+\begin{document}
+
+\section{Calcul littéral 1}
+
+
+\begin{exercise}
+Résoudre les équations suivantes :
+
+\genEquations
+\begin{center}
+\ResolEquation[Balance]{1}{-1}{5}{3}
+\end{center}
+
+\end{exercise}
+
+
+
+\begin{exercise}
+\PfCPanneaux[ViragesDroite] Calculer l’hypoténuse d’un triangle rectangle dont les côtés mesurent \Lg{3} et \Lg{4}.
+
+\end{exercise}
+
+\end{document}

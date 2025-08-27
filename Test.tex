@@ -1,0 +1,18 @@
+% !TEX program = lualatex
+\documentclass{article}
+\usepackage{ProfCollege}
+
+\begin{document}
+
+\QFlash[Seul]{%
+\Large Le prix du jour est :
+\BoiteFlash{\Prix{28}}/%
+$\square$ Il augmente de 10 \%.
+\\Son nouveau prix est :
+\BoiteFlash{}/%
+$\square$ Il diminue de 20 \%.
+\\Son nouveau prix est :
+\BoiteFlash{}%
+}
+
+\end{document}

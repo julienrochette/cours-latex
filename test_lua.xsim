@@ -1,0 +1,40 @@
+\providecommand\numberofexercises{}
+\XSIM{solution-body}{exercise-1=={Résoudre les équations suivantes : \par \begin {center} \ResolEquation [Balance]{1}{-1}{5}{3} \end {center} \par }||exercise-2=={\PfCPanneaux [ViragesDroite] Calculer l’hypoténuse d’un triangle rectangle dont les côtés mesurent \Lg {3} et \Lg {4}. \par }}
+\XSIM{exercise-body}{exercise-1=={Résoudre les équations suivantes : \par \genEquations \begin {center} \ResolEquation [Balance]{1}{-1}{5}{3} \end {center} \par }||exercise-2=={\PfCPanneaux [ViragesDroite] Calculer l’hypoténuse d’un triangle rectangle dont les côtés mesurent \Lg {3} et \Lg {4}. \par }}
+\XSIM{goal}{exercise}{points}{0}
+\XSIM{totalgoal}{points}{0}
+\XSIM{goal}{exercise}{bonus-points}{0}
+\XSIM{totalgoal}{bonus-points}{0}
+\XSIM{order}{1||2}
+\XSIM{use}{}
+\XSIM{use!}{}
+\XSIM{used}{exercise-1=={true}||exercise-2=={true}}
+\XSIM{print}{}
+\XSIM{print!}{}
+\XSIM{printed}{exercise-1=={true}||exercise-2=={true}}
+\XSIM{total-number}{2}
+\XSIM{exercise}{2}
+\XSIM{types}{exercise}
+\XSIM{idtypes}{1=={exercise}||2=={exercise}}
+\XSIM{collections}{exercise-1=={all exercises}||exercise-2=={all exercises}}
+\XSIM{collection:all exercises}{exercise-1||exercise-2}
+\setcounter{totalexerciseinall exercises}{2}
+\XSIM{id}{exercise-1=={1}||exercise-2=={2}}
+\XSIM{ID}{exercise-1=={1}||exercise-2=={2}}
+\XSIM{counter}{exercise-1=={1E1}||exercise-2=={1E2}}
+\XSIM{counter-value}{exercise-1=={1}||exercise-2=={2}}
+\XSIM{solution}{}
+\XSIM{section-value}{exercise-1=={1}||exercise-2=={1}}
+\XSIM{section}{exercise-1=={1}||exercise-2=={1}}
+\XSIM{sectioning}{exercise-1=={{0}{1}{0}{0}{0}}||exercise-2=={{0}{1}{0}{0}{0}}}
+\XSIM{subtitle}{}
+\XSIM{points}{}
+\XSIM{bonus-points}{}
+\XSIM{page-value}{exercise-1=={1}||exercise-2=={2}}
+\XSIM{page}{exercise-1=={1}||exercise-2=={2}}
+\XSIM{tags}{}
+\XSIM{topics}{}
+\XSIM{userpoints}{}
+\XSIM{bodypoints}{}
+\XSIM{userbonus-points}{}
+\XSIM{bodybonus-points}{}
