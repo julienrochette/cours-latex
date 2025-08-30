@@ -1,0 +1,92 @@
+% !TEX program = lualatex
+\documentclass[10pt,a5paper]{article}
+
+% -------- LuaLaTeX : polices et langue --------
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Tex Gyre Heros}
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+% -------- Mise en page --------
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+
+% -------- Mathématiques --------
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{siunitx}
+\sisetup{locale=FR}
+
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+
+\usepackage{ProfCollege}
+\usepackage{ProfMaquette}
+
+% Définition d'une nouvelle liste "todolist"
+\newlist{todolist}{itemize}{1}
+\setlist[todolist]{label=$\square$}
+
+% -------- Divers --------
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\begin{Maquette}[FdR]{}
+
+\begin{center}
+    \AfficheFdR
+\end{center}
+
+\begin{exercice}[Source=Mme Lyonnais, Route]
+Texte en \textcolor{red}{rouge}
+\Patron[Pave,ListeCouleurs={%
+Crimson,
+!,% Pas de couleur pour la face 2.
+LightGreen,
+Crimson,
+Orange,
+LightGreen}]{%
+phoo,
+lhpo,
+hopl,
+pool
+}
+\end{exercice}
+\begin{exercice}[Source=Mme Lyonnais]
+\ArbreCalcul{2*(3+5)+(-7)}
+\begin{enumerate}
+    \item\brm{1} Développer et réduire :
+    \[A=2x(3x+4)\]
+    \item\brm{2} Factoriser :
+    \[B=3s^2-12s\]
+\end{enumerate}
+\end{exercice}
+\begin{exercice}[Source=Mme Lyonnais, Route]
+\begin{enumerate}
+    \item\brm{1} Développer et réduire :
+    \[A=2x(3x+4)\]
+    \item\brm{2} Factoriser :
+    \[B=3s^2-12s\]
+\end{enumerate}
+\end{exercice}
+\begin{exercice}[Source=Mme Lyonnais, Route, Stop]
+\begin{enumerate}
+    \item\brm{1} Développer et réduire :
+    \[A=2x(3x+4)\]
+    \item\brm{2} Factoriser :
+    \[B=3s^2-12s\]
+\end{enumerate}
+\end{exercice}
+\begin{exercice}[Source=Mme Lyonnais, Route]
+\begin{enumerate}
+    \item\brm{1} Développer et réduire :
+    \[A=2x(3x+4)\]
+    \item\brm{2} Factoriser :
+    \[B=3s^2-12s\]
+\end{enumerate}
+\end{exercice}
+\end{Maquette}
+\end{document}
