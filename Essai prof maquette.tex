@@ -1,5 +1,5 @@
 % !TEX program = lualatex
-\documentclass[10pt,a5paper]{article}
+\documentclass[11pt,a5paper]{article}
 
 % -------- LuaLaTeX : polices et langue --------
 \usepackage{fontspec}
@@ -33,14 +33,29 @@
 % -------- Divers --------
 \setlength{\parindent}{0pt}
 
+% Générer la liste Lua dans une macro
+\newcommand{\genEquations}{
+\begin{itemize}
+\directlua{
+  % math.randomseed(os.time())
+  math.randomseed(123)
+  for i=1,6 do
+    local a = math.random(2,7)
+    local b = math.random(2,7)
+    local c = math.random(2,7)
+    local d = math.random(2,7)
+    if a==c then a=a+1 end
+    tex.sprint("\\item  $" .. a .. "x + " .. b .. " = " .. c .. "x + " .. d .. "$")
+  end
+}
+\end{itemize}
+}
+
 \begin{document}
-\begin{Maquette}[FdR]{}
 
-\begin{center}
-    \AfficheFdR
-\end{center}
+\begin{Maquette}[Fiche]{Niveau=3\textsuperscript{e}}
 
-\begin{exercice}[Source=Mme Lyonnais, Route]
+\begin{exercice}
 Texte en \textcolor{red}{rouge}
 \Patron[Pave,ListeCouleurs={%
 Crimson,
@@ -55,7 +70,8 @@ hopl,
 pool
 }
 \end{exercice}
-\begin{exercice}[Source=Mme Lyonnais]
+
+\begin{exercice}
 \ArbreCalcul{2*(3+5)+(-7)}
 \begin{enumerate}
     \item\brm{1} Développer et réduire :
@@ -64,29 +80,10 @@ pool
     \[B=3s^2-12s\]
 \end{enumerate}
 \end{exercice}
-\begin{exercice}[Source=Mme Lyonnais, Route]
-\begin{enumerate}
-    \item\brm{1} Développer et réduire :
-    \[A=2x(3x+4)\]
-    \item\brm{2} Factoriser :
-    \[B=3s^2-12s\]
-\end{enumerate}
-\end{exercice}
-\begin{exercice}[Source=Mme Lyonnais, Route, Stop]
-\begin{enumerate}
-    \item\brm{1} Développer et réduire :
-    \[A=2x(3x+4)\]
-    \item\brm{2} Factoriser :
-    \[B=3s^2-12s\]
-\end{enumerate}
-\end{exercice}
-\begin{exercice}[Source=Mme Lyonnais, Route]
-\begin{enumerate}
-    \item\brm{1} Développer et réduire :
-    \[A=2x(3x+4)\]
-    \item\brm{2} Factoriser :
-    \[B=3s^2-12s\]
-\end{enumerate}
+
+\begin{exercice}
+Résoudre les équations :
+\genEquations
 \end{exercice}
 \end{Maquette}
 \end{document}
