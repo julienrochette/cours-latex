@@ -5,6 +5,7 @@
 \usepackage{fontspec}
 \setmainfont{Latin Modern Roman}
 \setsansfont{Tex Gyre Heros}
+\renewcommand{\familydefault}{\sfdefault} % force le sans serif par défaut
 \usepackage{polyglossia}
 \setdefaultlanguage{french}
 
@@ -16,15 +17,11 @@
 
 % -------- Mathématiques --------
 \usepackage{amsmath,amssymb,mathtools}
-\usepackage{siunitx}
-\sisetup{locale=FR}
+% \usepackage{siunitx}
+% \sisetup{locale=FR}
 
 \usepackage{enumitem}
 \usepackage{ProfCollege}
-
-% Définition d'une nouvelle liste "todolist"
-\newlist{todolist}{itemize}{1}
-\setlist[todolist]{label=$\square$}
 
 % -------- Divers --------
 \setlength{\parindent}{0pt}
@@ -33,20 +30,23 @@
 \PfCPanneaux[FeuTricolore]
 \section*{Tâches de rentrée}
 
+\vspace{0.2em}
 Le plus rapidement possible :
 
-\begin{todolist}
-    \item compléter et rendre le coupon \emph{Autorisations entrée/sortie}
-\end{todolist}
+\begin{itemize}[leftmargin=1.5em, label=$\square$]
+    \item compléter et rendre le coupon \textbf{Autorisations entrée/sortie}
+\end{itemize}
 
-Pour le vendredi 13 septembre au plus tard :
-\begin{todolist}
-\item  compléter et rendre le coupon \emph{Réunion parents mardi 14/9}
-\item  compléter les 2e et 4e de couverture du \emph{carnet de liaison} (coller une \emph{photo})
-\item  lire et signer, élève et parent(s), le \emph{règlement intérieur} dans le carnet de liaison
-\item  compléter et rendre le coupon \emph{Médicaments}
-\item  faire signer et rendre la fiche \emph{État des manuels scolaires}
-\end{todolist}
+\vspace{0.6em}
+Pour le vendredi 12 septembre au plus tard :
+\begin{itemize}[leftmargin=1.5em, label=$\square$]
+\item  compléter et rendre le coupon \textbf{Réunion parents lundi 15/9}
+\item  compléter les 2\textsuperscript{e} et 4\textsuperscript{e} de couverture du \textbf{carnet de liaison}, coller une \textbf{photo}
+\item  lire et signer, élève et parent(s), le \textbf{règlement intérieur} dans le carnet de liaison
+\item  compléter et rendre le coupon \textbf{Médicaments}
+\item  faire signer et rendre la fiche \textbf{État des manuels scolaires}
+\end{itemize}
+\vspace{1em}
 Signature(s):
 
 \end{document}

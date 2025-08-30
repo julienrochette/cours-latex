@@ -1,0 +1,122 @@
+\documentclass[11pt,a5paper]{article}
+
+% -------- LuaLaTeX : polices et langue --------
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Tex Gyre Heros}
+\renewcommand{\familydefault}{\sfdefault} % force le sans serif par défaut
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+% -------- Mise en page --------
+\usepackage[a5paper, margin=1cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\usepackage{lipsum}
+\usepackage{enumitem}
+\usepackage{hyperref}
+% -------- Mathématiques --------
+\usepackage{amsmath,amssymb,mathtools}
+
+\begin{document}
+\vspace*{2em}
+\section*{Nouveau mode de calcul pour le DNB 2026}
+\vspace{1em}
+\begin{itemize}[leftmargin=1.1em,itemsep=1.2em]
+\item \textbf{Contrôle continu} : moyenne des \emph{moyennes annuelles durant l’année de troisième} des 12 matières obligatoires\\
+\vspace{0.2em}
+(les points au dessus de 10 de l'option s’ajoutent \emph{avant} la division par 12)
+\item \textbf{Épreuves terminales} : moyenne avec coefficients 
+\subitem Français (2)
+\subitem Mathématiques (2)
+\subitem Histoire‑Géographie (1.5)
+\subitem EMC (0.5)
+\subitem Sciences (2)
+\subitem Oral (2)
+\item \textbf{Note finale} :
+\vspace{-0.4em}
+\[ \mathsf{\textsf{contrôle continu} \times 0,40 \,\, + \,\, \textsf{épreuves terminales} \times 0,60} \]
+\item \textbf{Mentions} :
+\subitem $\mathsf{[12;14[}\,\,$ Assez Bien
+\subitem $\mathsf{[14; 16[}\,\,$ Bien
+\subitem $\mathsf{[16; 18[}\,\,$ Très bien
+\subitem $\mathsf{[18; 20]}\,\,$ Très bien les avec félicitations du jury
+\end{itemize}
+
+\section*{Calculateur en ligne}
+\url{https://calcul-points-brevet.fr/}
+\newpage
+
+\section*{Contrôle continu de l’année de 3\textsuperscript{e}}
+\begin{table}[h!]
+{\centering
+\renewcommand{\arraystretch}{1.5} 
+\begin{tabular}{l c c c c}
+\hline
+Matière & Trimestre 1 & Trimestre 2 & Trimestre 3 & Année \\
+\hline
+Français & 17 & 16 & 16 & 16,33 \\
+Mathématiques & 15 & 14 & 13 & 14 \\
+Histoire-Géographie & 9 & 12 & 10 & 10,33 \\
+E.M.C. & 13 & 13 & 15 & 13,67 \\
+Physique-Chimie & 16 & 13 & 14 & 14,33 \\
+S.V.T. & 9 & 8 & 10 & 9 \\
+Technologie & 15 & 11 & 10 & 12 \\
+Langue vivante 1 & 14 & 14 & 17 & 15 \\
+Langue vivante 2 & 13 & 17 & 16 & 15,33 \\
+Arts plastiques & 11 & 9 & 13 & 11 \\
+Éducation musicale & 14 & 15 & 11 & 13,33 \\
+E.P.S. & 19 & 15 & 16 & 16,67 \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+\vspace{1em}
+Une moyenne annuelle en Chant choral de 16/20 donne 6 points bonus.
+
+\vspace{1.3em}
+Le résultat au contrôle continu est donc :
+\[
+	\mathsf{
+		\dfrac{16,33+14+\ldots+13,33+16,67+6}{12} \,\, \simeq \,\, 13,92
+	}
+\]
+
+
+\newpage
+\section*{Épreuves terminales du DNB}
+\begin{table}[h!]
+{\centering
+\renewcommand{\arraystretch}{1.5} 
+\begin{tabular}{l c c}
+\hline
+Épreuve & Coefficient & Note /20\\
+\hline
+Français & 2 & 14 \\
+Mathématiques & 2 & 17 \\
+Histoire-Géographie & 1,5 & 15 \\
+E.M.C. & 0,5 & 13 \\
+Sciences & 2 & 14 \\
+Oral & 2 & 17 \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+Le résultat aux épreuves terminales est :
+\[\mathsf{
+	\dfrac{
+		2 \times 14 \, + \, 2 \times 17 \, + \, 1,5 \times 15 \, + \, 0,5 \times 13 \, + \, 2 \times 14 \, + \, 2 \times 17
+	}{10} \, \simeq \, 15,3
+}\]
+
+\vspace{1.3em}
+\section*{Note finale au DNB}
+\vspace{-1em}
+\[ \mathsf{13,92 \times 0,40 \,\, + \,\, 15,3 \times 0,60 \,\, \simeq 14,75 }\]
+\vspace{0,4em}
+DNB obtenu avec mention Bien car $\mathsf{14 \leq 14,75 < 16}$.
+\end{document}
