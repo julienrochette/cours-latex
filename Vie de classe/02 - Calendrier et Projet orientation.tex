@@ -1,5 +1,5 @@
 % !TEX program = lualatex
-\documentclass[11pt,a5paper]{article}
+\documentclass[11pt]{article}
 
 % -------- LuaLaTeX : polices et langue --------
 \usepackage{fontspec}
@@ -22,6 +22,7 @@
 \usepackage{tabularx}
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 \usepackage{graphicx} % indispensable pour \includegraphics
+\usepackage[most]{tcolorbox}
 
 % Styles
 \setlist[itemize]{leftmargin=1.2em}
@@ -29,15 +30,42 @@
 \setlength{\parskip}{0.4em}
 \setlength{\parindent}{0pt}
 
+
+% Pour contrôler les espacements de titres
+\usepackage{titlesec}
+
+% --- Remise à zéro des espacements ---
+
+% Paragraphes
+\setlength{\parskip}{7pt}     % pas d'espace vertical entre paragraphes
+\setlength{\parindent}{0pt}   % pas d'indentation
+
+% Espacements verticaux prédéfinis
+\setlength{\smallskipamount}{0pt}
+\setlength{\medskipamount}{0pt}
+\setlength{\bigskipamount}{0pt}
+
+% Titres
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+\titlespacing*{\subsection}{0pt}{0pt}{0pt}
+\titlespacing*{\subsubsection}{0pt}{0pt}{0pt}
+\titlespacing*{\paragraph}{0pt}{0pt}{0pt}
+
+
 % Cases à cocher
 \newcommand{\checkbox}{\(\square\)}
 \newcommand{\choix}[1]{\checkbox\ #1}
 \newcommand{\ligne}{{\color{gray!60}\hrulefill}}
+
+
 \begin{document}
 
+\begin{tcolorbox}[colback=blue!10!white, colframe=blue!80!black]
 \begin{center}
-\LARGE\textbf{Calendrier de l’année 2025−2026}
+\Large\textbf{Calendrier de l’année 2025−2026}
 \end{center}
+\end{tcolorbox}
+
 
 % T1
 \section*{Trimestre 1}
@@ -76,13 +104,16 @@ Conseillère d'Orientation, Psychologue de l'Éducation Nationale\\
 Prénom et nom : \ligne
 
 % Projet métier
-\section*{Projet et centres d'intérêt}
+\begin{tcolorbox}[colback=green!10!white, colframe=green!80!black]
+\begin{center}
+\Large\textbf{Projet et centres d’intérêt}
+\end{center}
+\end{tcolorbox}
 
 Idée/envie du métier que je souhaite exercer plus tard :
 
 \ligne
 
-\vspace{0.6em}
 Je coche trois domaines qui pourraient me correspondre :
 
 \begin{multicols}{3}
@@ -127,7 +158,6 @@ Je coche trois domaines qui pourraient me correspondre :
 
 \end{multicols}
 
-\vspace{0.6em}
 % Intérêt pour les matières
 Intérêt pour les matières, indépendemment de mes résultats :
 
@@ -140,17 +170,22 @@ Intérêt pour les matières, indépendemment de mes résultats :
   \item Éducation Physique et Sportive \avis
 \end{itemize}
 \newpage
-J'ai bien compris les trois possibilités, et surtout les différences entre elles, après la troisième : 2de GT, 2de Pro et Apprentissage.
+% Études et ressenti
+\begin{tcolorbox}[colback=orange!10!white, colframe=orange!80!black]
+\begin{center}
+\Large\textbf{Études et ressenti}
+\end{center}
+\end{tcolorbox}
 
-\vspace{0.6em}
+J'ai bien compris les trois possibilités, et surtout les différences entre elles, après la troisième : 2\textsuperscript{de} GT, 2\textsuperscript{de} Pro et Apprentissage.
+
 \begin{tabularx}{\textwidth}{Y Y Y}
 \choix{Oui} & \choix{Pas complètement} & \choix{Non}
 \end{tabularx}
 
-\vspace{1.6em}
+\vspace{10pt}
 Idée/envie pour mon premier vœu en fin d'année :
 
-\vspace{0.4em}
 \begin{tabularx}{\textwidth}{Y | Y Y}
 \choix{2\textsuperscript{de} GT} & \choix{2\textsuperscript{de} Pro} & \choix{Apprentissage}\\
 [0.4em]
@@ -160,9 +195,7 @@ Idée/envie pour mon premier vœu en fin d'année :
 \choix{Ne sait pas pour l'instant}
 \end{center}
 
-% Études et ressenti
-\section*{Études et ressenti}
-
+\vspace{10pt}
 J'envisage des études ...
 
 \begin{itemize}[label=\square, topsep=0pt]
@@ -171,8 +204,7 @@ J'envisage des études ...
 \item supérieures (2, 3, 5, 8 … ans après le bac)
 \end{itemize}
 
-
-\vspace{1.2em}
+\vspace{10pt}
 Par rapport à mon orientation en fin d'année, je me sens concerné(e)/impliqué(e) …
 \begin{itemize}[label=\square, topsep=0pt]
 \item pas du tout
@@ -180,8 +212,7 @@ Par rapport à mon orientation en fin d'année, je me sens concerné(e)/impliqu�
 \item beaucoup
 \end{itemize}
 
-
-\vspace{1.2em}
+\vspace{10pt}
 Cela me stresse / m'inquiète …
 \begin{itemize}[label=\square, topsep=0pt]
 \item pas du tout

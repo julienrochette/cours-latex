@@ -13,6 +13,7 @@
 \usepackage{fancyhdr}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
+\usepackage[most]{tcolorbox}
 
 \usepackage{lipsum}
 \usepackage{enumitem}
@@ -22,7 +23,11 @@
 
 \begin{document}
 \vspace*{2em}
-\section*{Nouveau mode de calcul pour le DNB 2026}
+\begin{tcolorbox}[colback=red!10!white, colframe=red!80!black]
+\begin{center}
+\Large\textbf{Nouveau mode de calcul pour le DNB 2026}
+\end{center}
+\end{tcolorbox}
 \vspace{1em}
 \begin{itemize}[leftmargin=1.1em,itemsep=1.2em]
 \item \textbf{Contrôle continu} : moyenne des \emph{moyennes annuelles durant l’année de troisième} des 12 matières obligatoires\\
