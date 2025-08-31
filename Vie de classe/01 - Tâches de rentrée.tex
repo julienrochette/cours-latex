@@ -14,6 +14,7 @@
 \usepackage{multicol}
 \usepackage{fancyhdr}
 \pagestyle{empty}
+\usepackage[most]{tcolorbox}
 
 % -------- Mathématiques --------
 \usepackage{amsmath,amssymb,mathtools}
@@ -28,9 +29,13 @@
 
 \begin{document}
 \PfCPanneaux[FeuTricolore]
-\section*{Tâches de rentrée}
+\begin{tcolorbox}[colback=teal!10!white, colframe=teal!80!black]
+\begin{center}
+\large\textbf{Tâches de rentrée}
+\end{center}
+\end{tcolorbox}
 
-\vspace{0.2em}
+\vspace{0.6em}
 Le plus rapidement possible :
 
 \begin{itemize}[leftmargin=1.5em, label=$\square$]
