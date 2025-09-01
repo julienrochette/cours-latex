@@ -9,8 +9,9 @@
 \setdefaultlanguage{french}
 
 % -------- Mise en page --------
-\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[a4paper,margin=1cm]{geometry}
 \usepackage{multicol}
+\setlength{\columnsep}{2cm}
 \usepackage{fancyhdr}
 \pagestyle{empty}
 
@@ -26,32 +27,13 @@
 \usepackage{ProfCollege}
 \usepackage{ProfMaquette}
 
-% Définition d'une nouvelle liste "todolist"
-\newlist{todolist}{itemize}{1}
-\setlist[todolist]{label=$\square$}
 
 % -------- Divers --------
 \setlength{\parindent}{0pt}
 
-% Générer la liste Lua dans une macro
-\newcommand{\genEquations}{
-\begin{itemize}
-\directlua{
-  % math.randomseed(os.time())
-  math.randomseed(123)
-  for i=1,6 do
-    local a = math.random(2,7)
-    local b = math.random(2,7)
-    local c = math.random(2,7)
-    local d = math.random(2,7)
-    if a==c then a=a+1 end
-    tex.sprint("\\item  $" .. a .. "x + " .. b .. " = " .. c .. "x + " .. d .. "$")
-  end
-}
-\end{itemize}
-}
-
 \begin{document}
+
+\begin{multicols}{2}
 
 \begin{Maquette}[Fiche]{Niveau=3\textsuperscript{e}}
 
@@ -83,7 +65,7 @@ pool
 
 \begin{exercice}
 Résoudre les équations :
-\genEquations
 \end{exercice}
 \end{Maquette}
+\end{multicols}
 \end{document}
