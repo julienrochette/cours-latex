@@ -1,0 +1,47 @@
+% !TEX program = lualatex
+\documentclass[11pt]{article}
+
+% -------- LuaLaTeX : polices et langue --------
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Tex Gyre Heros}
+\renewcommand{\familydefault}{\sfdefault} % force le sans serif par défaut
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+% -------- Mise en page --------
+\usepackage[a5paper,margin=1cm]{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+\usepackage[most]{tcolorbox}
+
+% -------- Mathématiques --------
+\usepackage{amsmath,amssymb,mathtools}
+% \usepackage{siunitx}
+% \sisetup{locale=FR}
+
+\usepackage{enumitem}
+%\usepackage{ProfCollege}
+
+% -------- Divers --------
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\begin{tcolorbox}[colback=orange!10!white, colframe=orange!80!black]
+\begin{center}
+\large\textbf{Exercice : le cadenas 1}
+\end{center}
+\end{tcolorbox}
+
+Un cadenas a un code à trois chiffres qui respectent les conditions suivantes :
+\begin{itemize}
+    \item tous les chiffres sont différents les uns des autres
+    \item tous les chiffres sont compris entre 0 et 7
+    \item les deux premiers chiffres sont chacun des nombres premiers
+    \item la somme des trois chiffres est un nombre premier
+\end{itemize}
+Quelles sont toutes les possibilités ?
+
+(il y a $\mathsf{4^2}$ solutions)
+\end{document}
