@@ -1,0 +1,49 @@
+% !TEX program = lualatex
+\documentclass[xcolor={table,svgnames}]{beamer}
+
+% Pour une meilleure écriture des mathématiques.
+\usefonttheme[onlymath]{serif}
+
+
+% -------- LuaLaTeX : polices et langue --------
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Tex Gyre Heros}
+\renewcommand{\familydefault}{\sfdefault} % force le sans serif par défaut
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+% ---------- Options générales ----------
+\usetheme{Madrid}
+\usecolortheme{orchid}
+\usefonttheme{professionalfonts}
+
+% Désactive footer et navbar
+\setbeamertemplate{footline}{}
+\setbeamertemplate{navigation symbols}{}
+
+\usepackage{graphicx}
+\usepackage{ProfCollege}
+
+% ---------- Infos ----------
+\title[Mon diaporama]{Questions flash}
+%\subtitle{Classe de troisième}
+%\author[Julien Rochette]{Julien Rochette \\ \texttt{julien-pierre-m.rochette@ac-dijon.fr}}
+\date{\today}
+
+
+% ---------- Début du document ----------
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\QFlash[Mesure]{\Lg{175}/%
+\Lg[m]{}/%
+\num{0.175}/%
+\Lg[dm]{1}/%
+\Lg[mm]{25}%
+}
+
+\end{document}

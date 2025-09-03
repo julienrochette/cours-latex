@@ -1,0 +1,100 @@
+% !TEX program = lualatex
+\documentclass[11pt]{beamer}
+
+% -------- LuaLaTeX : polices et langue --------
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Tex Gyre Heros}
+\renewcommand{\familydefault}{\sfdefault} % force le sans serif par défaut
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+% ---------- Options générales ----------
+\usetheme{Madrid}
+\usecolortheme{orchid}
+\usefonttheme{professionalfonts}
+
+% Désactive footer et navbar
+\setbeamertemplate{footline}{}
+\setbeamertemplate{navigation symbols}{}
+
+% Images, maths, code
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\small,breaklines=true}
+
+% ---------- Infos ----------
+\title[Mon diaporama]{Programme de mathématiques}
+\subtitle{Classe de troisième}
+%\author[Julien Rochette]{Julien Rochette \\ \texttt{julien-pierre-m.rochette@ac-dijon.fr}}
+\date{\today}
+
+% ---------- Commande pour créer une section avec colonne et image ----------
+\newcommand{\maSection}[3]{%
+  \section{#1}
+  \begin{frame}{\thesection. \insertsection}
+    \begin{columns}[T,onlytextwidth]
+      \column{0.48\textwidth}
+      \begin{itemize}
+        #2
+      \end{itemize}
+
+      \column{0.48\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{Images/#3.png}
+    \end{columns}
+  \end{frame}
+}
+
+% ---------- Début du document ----------
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Thèmes}
+  \tableofcontents
+\end{frame}
+
+% ---------- Sections ----------
+\maSection{Nombres et calculs}{
+  \item Nombres relatifs
+  \item Écriture fractionnaire
+  \item Arithmétique
+  \item Puissances
+  \item Calcul littéral
+}{1}
+
+\maSection{Organisation et gestion de données, fonctions}{
+  \item Proportionnalité, pourcentages, évolutions
+  \item Statistiques
+  \item Probabilités
+  \item Fonctions
+}{2}
+
+\maSection{Grandeurs et mesures}{
+  \item Unités
+  \item Grandeurs simples
+  \item Grandeurs composées
+  \item Formules
+}{3}
+
+\maSection{Espace et géométrie}{
+  \item Agrandissement et réduction
+  \item Théorème de Pythagore
+  \item Théorème de Thalès
+  \item Trigonométrie
+  \item Transformations
+  \item Sphères et boules
+  \item Repérage terrestre
+}{4}
+
+\maSection{Algorithmique et programmation}{
+  \item Scratch
+  \item Tableur
+}{5}
+
+\end{document}

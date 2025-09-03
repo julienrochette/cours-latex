@@ -1,0 +1,54 @@
+% !TEX program = lualatex
+\documentclass[11pt]{article}
+
+% -------- LuaLaTeX : polices et langue --------
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Tex Gyre Heros}
+%\renewcommand{\familydefault}{\sfdefault} % force le sans serif par défaut
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+% -------- Mise en page --------
+\usepackage[a4paper]{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+\usepackage[most]{tcolorbox}
+
+% -------- Mathématiques --------
+\usepackage{amsmath,amssymb,mathtools}
+% \usepackage{siunitx}
+% \sisetup{locale=FR}
+
+\usepackage{enumitem}
+\usepackage{ProfCollege}
+
+% -------- Divers --------
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{tcolorbox}[colback=teal!10!white, colframe=teal!80!black]
+\begin{center}
+\large\textbf{Tâches de rentrée}
+\end{center}
+\end{tcolorbox}
+
+\section{Rappels}
+
+\subsection{Division euclidienne}
+
+Effectuer la \emph{division euclidienne} d’un nombre entier $a$ par un nombre entier $b \neq 0$, c’est trouver deux nombres entier $q$ et $r$ tels que :
+\[
+a = b \times q + r \qquad \textrm{et} \qquad 0 \leq r < b
+\]
+
+\subsection{Divisibilité}
+
+\section{Nombres premiers}
+\subsection{Crible d’Ératosthène}
+
+\section{Décomposition primaire}
+
+\end{document}

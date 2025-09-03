@@ -1,0 +1,8 @@
+for img in *.png; do
+    # Nom de sortie : rajoute "Resized" avant l'extension
+    base="${img%.png}"
+    output="${base}Resized.png"
+
+    echo "Traitement de $img → $output"
+    magick "$img" -resize 60% "$output"
+done

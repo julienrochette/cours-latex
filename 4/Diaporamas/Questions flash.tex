@@ -1,0 +1,70 @@
+% !TEX program = lualatex
+\documentclass[xcolor={table,svgnames}]{beamer}
+
+% Pour une meilleure écriture des mathématiques.
+\usefonttheme[onlymath]{serif}
+
+
+% -------- LuaLaTeX : polices et langue --------
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Tex Gyre Heros}
+\renewcommand{\familydefault}{\sfdefault} % force le sans serif par défaut
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+% ---------- Options générales ----------
+\usetheme{Madrid}
+\usecolortheme{orchid}
+\usefonttheme{professionalfonts}
+
+% Désactive footer et navbar
+\setbeamertemplate{footline}{}
+\setbeamertemplate{navigation symbols}{}
+
+\usepackage{graphicx}
+\usepackage{ProfCollege}
+
+% ---------- Infos ----------
+\title[Mon diaporama]{Questions flash - Quatrième}
+%\author[Julien Rochette]{Julien Rochette \\ \texttt{julien-pierre-m.rochette@ac-dijon.fr}}
+\date{\today}
+
+
+% ---------- Début du document ----------
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\QFlash[Mental]{\num{18}/%
+\num{12}/%
+\num{8}/%
+\num{10}/%
+\num{3}/%
+\num{50}/%
+$\dfrac{1}{4}$%
+}
+
+\QFlash[Daily]{%
+15/%
+$\times2$/%
+$-8$/%
+\scriptsize%
+\begin{tabular}{c}
+Moitié\\
+de
+\end{tabular}/%
+$\times4$/%
+$+1$/%
+$\div9$/%
+\scriptsize%
+\begin{tabular}{c}
+Prendre\\
+le carré%
+\end{tabular}/%
+$-7$%
+}%
+
+\end{document}
