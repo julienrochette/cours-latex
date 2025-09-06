@@ -8,15 +8,14 @@ fi
 SRC_FILE="$1"
 BASE_NAME=$(basename "$SRC_FILE" .tex)
 
-# Dossier central pour tous les fichiers auxiliaires
+SRC_ROOT="/home/jrochette/Bureau/DossierGit/cours-latex"
+
 BUILD_DIR=~/.latex_build
 mkdir -p "$BUILD_DIR"
 
-# Dossier Nextcloud pour les PDFs
-NEXTCLOUD_DIR=~/Bureau/Nextcloud
-mkdir -p "$NEXTCLOUD_DIR"
+OUTPUT_DIR=/run/media/jrochette/Julien
+mkdir -p "$OUTPUT_DIR"
 
-# Compiler avec latexmk et LuaLaTeX
 latexmk -pdf -pdflatex="lualatex -interaction=nonstopmode" \
         -outdir="$BUILD_DIR" "$SRC_FILE"
 
@@ -26,10 +25,15 @@ if [ ! -f "$PDF_FILE" ]; then
     exit 1
 fi
 
-# Déplacer le PDF vers Nextcloud
-mv "$PDF_FILE" "$NEXTCLOUD_DIR/"
+# Calcul du chemin relatif pour reproduire l'architecture
+REL_PATH=$(realpath --relative-to="$SRC_ROOT" "$SRC_FILE")
+REL_DIR=$(dirname "$REL_PATH")
+DEST_DIR="$OUTPUT_DIR/$REL_DIR"
+mkdir -p "$DEST_DIR"
 
-# Nettoyer les fichiers auxiliaires dans le dossier central
+mv "$PDF_FILE" "$DEST_DIR/$BASE_NAME.pdf"
+
 latexmk -c -outdir="$BUILD_DIR" "$SRC_FILE"
 
-echo "Compilation terminée. PDF déplacé dans $NEXTCLOUD_DIR"
+echo "Compilation terminée. PDF déplacé dans $DEST_DIR"
+
