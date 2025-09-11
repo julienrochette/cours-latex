@@ -18,8 +18,8 @@
 
 % -------- Mathématiques --------
 \usepackage{amsmath,amssymb,mathtools}
-% \usepackage{siunitx}
-% \sisetup{locale=FR}
+%\usepackage{siunitx}
+%\sisetup{locale=FR}
 
 \usepackage{enumitem}
 \setlist[itemize]{left=0pt}
@@ -167,11 +167,56 @@ secondes.
 \end{exercice}
 
 \columnbreak
+
 \begin{exercice}
     Trouve un chemin permettant de relier les deux super-héros en ne passant que par des nombres premiers. (pas de passage en diagonale)
     \includegraphics[width=\linewidth]{Images/Labyrinthe.png}
 \end{exercice}
 
+\begin{exercice}
+    Une urne contient des boules indiscernables au toucher numérotées avec les nombres entiers de 1 à 20.
+    \begin{center}
+        \SchemaProba[%
+        ListeNombres={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20},
+        Echelle=0.75,
+        Pas=6,
+        Repartition={1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}]
+    \end{center}
+    \begin{enumerate}
+        \item Quelle est la probabilité de tirer une boule avec un nombre pair ?
+        \item A-t-on plus de chanche de tirer une boule avec un multiple de 4, ou une boule avec un diviseur de 4 ?
+        \item Quelle est la probabilité de tirer une boule avec un nombre premier ?
+    \end{enumerate}
+    \emph{Les réponses doivent être données sous la forme d’une fraction, d’un nombre décimal puis du pourcentage correspondant.}
+\end{exercice}
+
+
+\begin{exercice}
+    Complète afin d’obtenir la décomposition en produit de nombres premiers des nombres suivants. Écris ensuite les décompositions sur ton cahier.
+    \begin{multicols}{3}
+        \Decomposition[TableauVerticalVide]{48}
+        \Decomposition[TableauVerticalVide]{90}
+        \Decomposition[TableauVerticalVide]{100}
+    \end{multicols}
+    \begin{multicols}{3}
+        \Decomposition[TableauVerticalVide]{150}
+        \Decomposition[TableauVerticalVide]{204}
+        \Decomposition[TableauVerticalVide]{308}
+    \end{multicols}
+\end{exercice}
+
+\begin{exercice}
+    Le capitaine d'un navire possède un trésor constitué de $69$ diamants, $1150$ perles et $4140$ pièces d'or.
+
+    \smallskip
+
+    \begin{enumerate}
+    \item Décomposer $69$ ; $1150$ et $4140$ en produits de facteurs premiers.
+    \item Le capitaine partage équitablement le trésor entre les marins.
+
+    Combien y-a-t-il de marins sachant que toutes les pièces, perles et diamants ont été distribués ?
+    \end{enumerate}
+\end{exercice}
 \end{Maquette}
 
 \end{multicols}

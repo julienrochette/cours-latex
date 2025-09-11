@@ -29,6 +29,7 @@
 \usepackage{ProfMaquette}
 
 \usepackage{tabularray}
+\usepackage{tabularx}
 
 % -------- Divers --------
 \setlength{\parindent}{0pt}
@@ -168,6 +169,78 @@ secondes.
 \begin{exercice}
     Trouve un chemin permettant de relier les deux super-héros en ne passant que par des nombres premiers. (pas de passage en diagonale)
     \includegraphics[width=\linewidth]{Images/Labyrinthe.png}
+\end{exercice}
+
+\columnbreak
+
+\begin{exercice}[Source=DNB 2017]
+Un sac contient 20 boules ayant chacune la même probabilité d’être tirée. Ces 20 boules sont numérotées de 1 à 20. On tire un boule au hasard dans le sac.
+
+\emph{Tous les résultats seront donnés sous la forme d’une fraction irréductible, puis d’un pourcentage.}
+\begin{enumerate}
+    \item Quelle est la probabilité de tirer la boule numérotée 13 ?
+    \item Quelle est la probabilité de tirer une boule portant un numéro pair ?
+    \item A-t-on plus de chances d’obtenir une boule portant un numéro multiple de 4 que d’obtenir une boule portant un numéro diviseur de 4 ?
+    \item Quelle est la probabilité de tirer une boule portant un numéro qui soit un nombre premier ?
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+    \begin{center}
+        \includegraphics[width=.5\linewidth]{Images/Dés4faces.png}
+    \end{center}
+    Audrey possède deux dés à 4 faces numérotés de 1 à 4, un vert et un jaune.
+    Elle lance les deux dés puis forme le nombre obtenu en prenant comme chiffre des dizaines le chiffre obtenu avec le dé vert, et comme chiffre des unités celui obtenu avec le dé jaune. Quel évènement est le plus probable ?
+    \begin{itemize}
+        \item A : « Elle obtient un multiple de 3. »
+        \item B : « Elle obtient un nombre premier. »
+    \end{itemize}
+\end{exercice}
+
+\columnbreak
+
+\begin{exercice}
+    Complète afin d’obtenir la décomposition en produit de nombres premiers des nombres suivants. Écris ensuite les décompositions sur ton cahier.
+    \begin{multicols}{3}
+        \Decomposition[TableauVerticalVide]{48}
+        \Decomposition[TableauVerticalVide]{90}
+        \Decomposition[TableauVerticalVide]{100}
+    \end{multicols}
+    \begin{multicols}{3}
+        \Decomposition[TableauVerticalVide]{150}
+        \Decomposition[TableauVerticalVide]{204}
+        \Decomposition[TableauVerticalVide]{308}
+    \end{multicols}
+\end{exercice}
+
+\begin{exercice}[Source=DNB Juin 2025 Asie]
+    Un magasin a reçu $650$ poissons dont $350$ poissons de type A et $300$ poissons de type B.
+
+    La responsable du magasin souhaite vendre ces poissons par lots de sorte que :
+
+    \begin{itemize}[label=$\bullet~$]
+    \item le nombre de poissons de type A soit le même dans chaque lot ;
+    \item le nombre de poissons de type B soit le même dans chaque lot ;
+    \item tous les poissons soient répartis dans les lots.
+    \end{itemize}
+
+    \smallskip
+
+    \begin{enumerate}
+    \item Parmi les trois propositions suivantes, laquelle correspond à la décomposition en produits de facteurs premiers du nombre $300$ ? \textbf{Aucune justification n'est demandée.}
+
+    \begin{center}\small \begin{tabularx}{\linewidth}{|*{3}{>{\centering \arraybackslash}X|}}\hline
+    Proposition 1 &Proposition 2&Proposition 3\\ \hline
+    $2^2 \times 5 \times 15$& $2\times 2\times 3\times 5\times 5$&
+    $22 \times3 \times 5^2$\\ \hline
+    \end{tabularx}
+    \end{center}
+
+    \item Donner la décomposition en produit de facteurs premiers du nombre $350$.
+    \item Quel nombre maximal de lots la responsable du magasin pourra-t-elle constituer ?
+    \item Dans ce cas, combien y aura-t-il de poissons de chaque type dans chaque lot ?
+    \end{enumerate}
+
 \end{exercice}
 
 \end{Maquette}
