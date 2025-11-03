@@ -1,0 +1,149 @@
+% !TEX program = lualatex
+\documentclass[11pt]{article}
+
+% -------- LuaLaTeX : polices et langue --------
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Tex Gyre Heros}
+%\renewcommand{\familydefault}{\sfdefault} % force le sans serif par défaut
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+% -------- Mise en page --------
+\usepackage[a4paper,margin=1cm]{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+\usepackage[most]{tcolorbox}
+
+% -------- Mathématiques --------
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{icomma}
+% \sisetup{locale=FR}
+
+\usepackage{enumitem}
+\setlist[itemize]{left=0pt}
+\setlist[enumerate]{left=0pt, label=\textbf{\alph*}.}
+
+\usepackage{ProfCollege}
+\usepackage{ProfMaquette}
+
+\usepackage{tabularray}
+
+% -------- Divers --------
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+
+\begin{Maquette}[Fiche]{Theme=Nombres relatifs et opérations, Niveau=Quatrième}
+
+    \begin{multicols}{2}
+        \begin{exercice}
+            Recopie et effectue les calculs suivants.
+            \begin{enumerate}
+                \item $7-10$
+                \item $-3+5$
+                \item $15-2$
+                \item $-9-1$
+                \item $-10+2$
+                \item $(-3)+(-2)$
+                \item $5+(-2)$
+                \item $7-(-3)$
+                \item $-10-(-2)$
+            \end{enumerate}
+        \end{exercice}
+
+        \begin{exercice}
+            Complète la pyramdie d’additions suivantes.\\
+            (Le contenu d’une case doit toujours être égal au résultat de l’addition des deux cases situées en immédiatement en dessous.)
+            \begin{center}
+
+                \PyramideNombre[Largeur=1.5cm]{%
+                    10,-4,3,-7,9,%
+                    ~,~,~,~,%
+                    ~,~,~,%
+                    ~,~,%
+                    ~}
+            \end{center}
+        \end{exercice}
+
+        \begin{exercice}
+            \begin{enumerate}
+                \item Lucie prétend qu’elle est capable d’écrire un calcul qui a le même résultat que $(-5)\times 4$ en utilisant uniquement des additions. Comment fait-elle ? Quelle est donc le résultat du produit $(-5) \times 4$ ?
+                \item Calcule de la même manière $(-10) \times 3$ et $3 \times (-2)$.
+                \item Donne une règle qui permet, d’après toi, de multiplier deux nombres relatifs de signes contraires.
+            \end{enumerate}
+        \end{exercice}
+
+        \begin{exercice}
+            Recopie et effectue les calculs suivants.
+            \begin{multicols}{2}
+
+                \begin{enumerate}
+                    \item $(-6) \times 10$
+                    \item $7 \times (-2)$
+                    \item $(-1) \times 8$
+                    \item $(-2) \times 1,5$
+                    \item $2,3 \times (-100)$
+                    \item $1000 \times (-3,7)$
+                \end{enumerate}
+            \end{multicols}
+        \end{exercice}
+
+        \begin{exercice}
+            Un jeu de cartes est composé de cartes avec des nombres relatifs qui font gagner (nombres positifs) et perdre (nombres négatifs) des points.
+            Un joueur a des cartes dans sa main et son score total vaut $30$.
+            Que se passe-t-il s’il …
+            \begin{enumerate}
+                \item … ajoute deux cartes $1$ dans sa main ?
+                \item … ajoute deux cartes $-4$ dans sa main ?
+                \item … enlève deux cartes $3$ de sa main ?
+                \item … enlève deux cartes $-5$ de sa main ?
+            \end{enumerate}
+        \end{exercice}
+
+
+    \end{multicols}
+    \vspace{1cm}
+    \begin{multicols}{2}
+        \begin{exercice}
+            Recopie et effectue les calculs suivants.
+            \begin{multicols}{2}
+
+                \begin{enumerate}
+                    \item $(-6) \times (-2)$
+                    \item $-7 \times (-10)$
+                    \item $(-3) \times 5$
+                    \item $(-2) \times 5$
+                    \item $(-1,5) \times (-100)$
+                    \item $1000 \times 3,7$
+                    \item $-1,1 \times (-13)$
+                    \item $0,02 \times (-1,4)$
+                \end{enumerate}
+            \end{multicols}
+        \end{exercice}
+
+        \columnbreak
+
+        \begin{exercice}
+            On s’intéresse aux quatre calculs suivants :
+            \begin{enumerate}
+                \item $(-2) \times (-3) \times (-5)$
+                \item $(-2) \times (-5) \times (-7) \times (-11)$
+                \item $(-2) \times 3 \times (-3) \times (-10)$
+                \item $2 \times (-5) \times (-2) \times 5$
+            \end{enumerate}
+            Léa dit qu’il est facile de prédire le signe du résultat. Pourquoi a-t-elle raison ? Recopie chaque calcul et indique son résultat.
+        \end{exercice}
+    \end{multicols}
+    \newpage
+    \begin{exercice}
+        Bla 8
+    \end{exercice}
+    \begin{exercice}
+        Bla 9
+    \end{exercice}
+\end{Maquette}
+
+\end{document}
