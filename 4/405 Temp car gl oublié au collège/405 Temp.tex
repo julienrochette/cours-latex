@@ -1,0 +1,128 @@
+% !TEX program = lualatex
+\documentclass[11pt]{article}
+
+% -------- LuaLaTeX : polices et langue --------
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Tex Gyre Heros}
+%\renewcommand{\familydefault}{\sfdefault} % force le sans serif par défaut
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+% -------- Mise en page --------
+\usepackage[a4paper,margin=1cm]{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+\usepackage[most]{tcolorbox}
+
+% -------- Mathématiques --------
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{icomma}
+% \sisetup{locale=FR}
+
+\usepackage{enumitem}
+\setlist[itemize]{left=0pt}
+\setlist[enumerate]{left=0pt, label=\textbf{\alph*}.}
+
+\usepackage{ProfCollege}
+\usepackage{ProfMaquette}
+
+\usepackage{tabularray}
+
+% -------- Divers --------
+\setlength{\parindent}{0pt}
+
+\newcommand{\ligne}{{\color{gray!60}\hrulefill}}
+
+\begin{document}
+
+
+\begin{Maquette}[Fiche]{Theme=Théorème de Pythagore, Niveau=Quatrième}
+
+    \begin{multicols}{5}
+        \begin{exercice}\end{exercice}
+        \begin{exercice}\end{exercice}
+        \begin{exercice}\end{exercice}
+        \begin{exercice}\end{exercice}
+        \begin{exercice}\end{exercice}
+    \end{multicols}
+    \vspace{1cm}
+    \begin{exercice}
+        On a construit des carrés sur les trois côtés de certains triangles. Dans chaque cas :
+        \begin{itemize}
+            \item calcule l’aire des trois carrés
+            \item compare l’aire du plus grand carré avec l’aire des deux petits carrés réunis
+        \end{itemize}
+
+    \end{exercice}
+\end{Maquette}
+\setlength{\columnsep}{1cm}
+\begin{multicols}{2}
+    \underline{Situation 1 :}
+    \begin{center}
+        \includegraphics[width=.8\linewidth]{Images/1.png}
+    \end{center}
+    Aire du grand carré : \ligne
+
+    \vspace{.4cm}
+    Aire des deux petits réunis : \ligne
+
+    \columnbreak
+    \underline{Situation 2 :}
+    \begin{center}
+        \includegraphics[width=.8\linewidth]{Images/2.png}
+    \end{center}
+    Aire du grand carré : \ligne
+
+    \vspace{.4cm}
+    Aire des deux petits réunis : \ligne
+
+\end{multicols}
+\newpage
+\begin{multicols}{2}
+    \underline{Situation 3 :}
+    \begin{center}
+        \includegraphics[width=.8\linewidth]{Images/4.png}
+    \end{center}
+    Aire du grand carré : \ligne
+
+    \vspace{.4cm}
+    Aire des deux petits réunis : \ligne
+
+
+    \columnbreak
+    \underline{Situation 4 :}
+    \begin{center}
+        \includegraphics[width=.8\linewidth]{Images/5.png}
+    \end{center}
+    Aire du grand carré : \ligne
+
+    \vspace{.4cm}
+    Aire des deux petits réunis : \ligne
+
+\end{multicols}
+\vspace{1cm}
+\begin{multicols}{2}
+    \underline{Situation 5 :}
+    \begin{center}
+        \includegraphics[width=.8\linewidth]{Images/3.png}
+    \end{center}
+    Aire du grand carré : \ligne
+
+    \vspace{.4cm}
+    Aire des deux petits réunis : \ligne
+
+    \columnbreak
+    \underline{Situation 6 :}
+    \begin{center}
+        \includegraphics[width=.8\linewidth]{Images/6.png}
+    \end{center}
+    Aire du grand carré : \ligne
+
+    \vspace{.4cm}
+    Aire des deux petits réunis : \ligne
+
+\end{multicols}
+
+\end{document}
