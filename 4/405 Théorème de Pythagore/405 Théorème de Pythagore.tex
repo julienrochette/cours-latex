@@ -1,0 +1,106 @@
+% !TEX program = lualatex
+\documentclass[11pt]{article}
+
+% -------- LuaLaTeX : polices et langue --------
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Tex Gyre Heros}
+%\renewcommand{\familydefault}{\sfdefault} % force le sans serif par défaut
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+% -------- Mise en page --------
+\usepackage[a4paper,margin=1cm]{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+\usepackage[most]{tcolorbox}
+
+% -------- Mathématiques --------
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{icomma}
+% \sisetup{locale=FR}
+
+\usepackage{enumitem}
+\setlist[itemize]{left=0pt}
+\setlist[enumerate]{left=0pt, label=\textbf{\alph*}.}
+
+\usepackage{ProfCollege}
+\usepackage{ProfMaquette}
+
+\usepackage{tabularray}
+
+% -------- Divers --------
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+
+\begin{Maquette}[Fiche]{Theme=Théorème de Pythagore, Niveau=Quatrième}
+
+    \begin{multicols}{2}
+        
+        \begin{exercice}
+            Dans chaque cas, calcule l’aire d’un carré …
+            \begin{multicols}{2}
+                \begin{enumerate}
+                    \item de côté \Lg{6}
+                    \item de côté \Lg[dm]{5}
+                    \item de côté \Lg[mm]{11}
+                    \item de côté \Lg{35}
+                    \item de côté \Lg[m]{3,4}
+                    \item de côté \Lg[m]{120}
+                \end{enumerate}
+            \end{multicols}
+            Réalise à chaque fois un schéma et reporte les différentes valeurs dessus.
+        \end{exercice}
+
+        \begin{exercice}
+            À l’aide de ta calculatrice, complète les égalités suivantes. 
+            
+            Ne tape aucune multiplication sur ta calculatrice, mais utilise directement la touche Carré : $x ^2$, $\blacksquare ^2$ ou $\square ^2$.
+
+            \begin{multicols}{2}
+                \begin{enumerate}
+                    \item $153^2 = \ldots \ldots \ldots$
+                    \item $17,5^2 = \ldots \ldots \ldots$
+                    \item $5,8^2  = \ldots \ldots \ldots$
+                    \item $12,23^2  = \ldots \ldots \ldots$
+                    \item $17,02^2 = \ldots \ldots \ldots$
+                    \item $1006^2 = \ldots \ldots \ldots \ldots$
+                \end{enumerate}
+            \end{multicols}
+        \end{exercice}
+
+        
+        \begin{exercice}
+            Un carré a une aire de \Aire{81}. Quelle est la longueur de son côté ? Réalise un schéma et reporte les valeurs dessus.
+        \end{exercice}
+
+
+        
+        \begin{exercice}
+            À l’aide de ta calculatrice, complète les égalités suivantes. 
+            
+            \begin{multicols}{2}
+                \begin{enumerate}
+                    \item $\sqrt{256} = \ldots \ldots$
+                    \item $\sqrt{62001} = \ldots \ldots$
+                    \item $\sqrt{289} = \ldots \ldots$
+                    \item $\sqrt{7140,25} = \ldots \ldots$
+                    \item $\sqrt{357,21} = \ldots \ldots$
+                    \item $\sqrt{18,29} = \ldots \ldots$
+                    \item $\sqrt{157} = \ldots \ldots$
+                    \item $\sqrt{40} = \ldots \ldots$
+                \end{enumerate}
+            \end{multicols}
+        \end{exercice}
+
+        \begin{exercice}
+            \includegraphics[width=\linewidth]{Images/ex4.png}
+        \end{exercice}
+
+    \end{multicols}
+\end{Maquette}
+
+\end{document}

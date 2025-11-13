@@ -1,0 +1,98 @@
+% !TEX program = lualatex
+\documentclass[11pt]{article}
+
+% -------- LuaLaTeX : polices et langue --------
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Tex Gyre Heros}
+%\renewcommand{\familydefault}{\sfdefault} % force le sans serif par défaut
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+% -------- Mise en page --------
+\usepackage[a4paper,margin=1cm]{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+
+% -------- Mathématiques --------
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{icomma}
+% \sisetup{locale=FR}
+
+\usepackage{enumitem}
+\setlist[itemize]{left=0pt}
+\setlist[enumerate]{left=0pt, label=\textbf{\alph*}.}
+
+\usepackage{ProfCollege}
+\usepackage{ProfMaquette}
+
+\usepackage{tabularray}
+
+% -------- Divers --------
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{Maquette}[Fiche]{Theme=Triangles semblables et théorème de Thalès, Niveau=Troisième}
+
+   \begin{multicols}{2}
+      
+      \begin{exercice}
+      Ci-dessous, les triangles MER et LOA sont semblables.
+
+         \includegraphics[width=.90\linewidth]{Images/ex1.png}
+         Quel est l’homologue
+         \begin{enumerate}
+            \item du sommet L ?
+            \item du sommet E ?
+            \item du côté $[\textrm{ME}]$ ?
+            \item de l’angle $\widehat{\textrm{LAO}}$ ?
+         \end{enumerate}
+      \end{exercice}
+
+      \newcolumn
+
+      \begin{exercice}
+         \begin{itemize}
+            \item Quel lien y a-t-il entre les mesures des trois angles d’un triangles ?
+            \item Dans chaque cas, démontre que les deux triangles sont semblables.
+         \end{itemize}
+               
+            \begin{center}
+               \includegraphics[width
+               =\linewidth]{Images/ex2.png}
+            \end{center}
+      \end{exercice}
+
+         \begin{exercice}
+            ART et ZEN sont deux triangles tels que :
+            \begin{itemize}
+               \item AR = \Lg{12}, AT = \Lg{14,4}, RT = \Lg{8,1}
+               \item ZE = \Lg{10}, ZN = \Lg{5,4}, EN  = \Lg{8}
+            \end{itemize}
+            Réaliser deux figures à main levée.
+
+            Ces deux triangles sont-ils semblables ? Justifier.
+         \end{exercice}
+   \end{multicols}
+   
+   \begin{multicols}{2}
+      \begin{exercice}
+         
+         \includegraphics[width=\linewidth]{Images/ex4.png}
+      \end{exercice}
+\newcolumn
+      \begin{exercice}
+        Les deux triangles ABC et DEF de ce pendentif sont deux trianles isocèles semblables. Calculer la longueur AB.
+        \begin{center}
+        
+         \includegraphics[width = .75\linewidth]{Images/ex5.png}
+      \end{center}
+      \end{exercice}
+      \end{multicols}
+\end{Maquette}
+
+\end{document}
