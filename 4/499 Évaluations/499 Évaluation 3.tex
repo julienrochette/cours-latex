@@ -1,0 +1,146 @@
+% !TEX program = lualatex
+\documentclass[11pt]{article}
+
+% -------- LuaLaTeX : polices et langue --------
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Tex Gyre Heros}
+%\renewcommand{\familydefault}{\sfdefault} % force le sans serif par défaut
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+% -------- Mise en page --------
+\usepackage[a4paper,margin=1cm]{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+\usepackage[most]{tcolorbox}
+
+% -------- Mathématiques --------
+\usepackage{amsmath,amssymb,mathtools}
+% \usepackage{siunitx}
+% \sisetup{locale=FR}
+
+\usepackage{enumitem}
+\setlist[itemize]{left=0pt}
+\setlist[enumerate]{left=0pt, label=\textbf{\alph*}.}
+
+\newcommand{\checkbox}{\(\square\)}
+
+\usepackage{ProfCollege}
+\usepackage{ProfMaquette}
+
+%\usepackage{tabularray}
+\usepackage{tabularx}
+
+
+% -------- Divers --------
+\newcommand{\ligne}{{\color{gray!60}\hrulefill}}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+
+
+\begin{Maquette}[IE]{
+        Numero = 3, Code={}, Date = jeudi 20 novembre, Theme = Nombres relatifs / Automatismes, Calculatrice = false
+    }
+
+    \begin{exercice}
+        \brm{5} Effectue les calculs suivants.
+        \begin{multicols}{2}
+            \begin{enumerate}[itemsep=10pt]
+                \item $ (-2) \times (-10) = $ \ligne
+                \item $ 8 \times (-3) = $ \ligne
+                \item $ (-3) \times (-2,5) = $ \ligne
+                \item $ 9 \times (-1) = $ \ligne
+                \item $ (-5) \times 5 = $ \ligne
+                \item $ 100 \div (-2) = $ \ligne
+                \item $ (-15) \div (-5) = $ \ligne
+                \item $ \dfrac{17}{-1} = $ \ligne
+                \item $ \dfrac{-66}{11} = $ \ligne
+                \item $ - \dfrac{24}{-2} = $ \ligne
+            \end{enumerate}
+
+        \end{multicols}
+    \end{exercice}
+
+    \vspace{.5cm}
+    \begin{exercice}
+        \brm{5} Coche proprement les cases des calculs dont le résultat est un nombre positif.
+        \begin{multicols}{2}
+            \begin{itemize}[itemsep=10pt, label=\checkbox]
+                \item $ -3+5 $
+                \item $ -10 - 2 $
+                \item $-5 + 20 - 2$
+                \item $ 7 -(-2) $
+                \item $ -3 - (-4)$
+                \item $ (-5) \times 3$
+                \item $ (-10) \times (-3) \times (-2)$
+                \item $ (-1) \times 1 \times (-5) \times (-5) \times (-10) $
+                \item $ (-1) \times 2 \times (-3) \times 4 \times (-5)$
+                \item $\dfrac{(-5)\times 30 \times (-4)}{2 \times(-3) \times 5 }$
+            \end{itemize}
+        \end{multicols}
+    \end{exercice}
+
+    \vspace{.5cm}
+    \begin{exercice}
+        \brm{5}
+        Effectue les deux calculs suivants. Rédige de manière détaillée.
+
+        \begin{multicols}{2}
+
+            \begin{itemize}[itemsep=10pt]
+                \item $\textrm{A} = \left[(3 - 5) \times 4 + 2\right] \times 3 - 7$
+                \item[] \ligne
+                \item[] \ligne
+                \item[] \ligne
+                \item[] \ligne
+                \item[] \ligne
+                \item $\textrm{B} =3 - 5 \times \left[(4 + 2) \times 3 - 7 \right]$
+                \item[] \ligne
+                \item[] \ligne
+                \item[] \ligne
+                \item[] \ligne
+                \item[] \ligne
+            \end{itemize}
+
+        \end{multicols}
+
+    \end{exercice}
+
+    \vspace{.5cm}
+    \begin{exercice}
+        \begin{multicols}{2}
+            \begin{itemize}[itemsep=10pt]
+                \brm{10}
+                \item le carré de $4$ : \ligne
+                \item $10$ au carré : \ligne
+                \item $11^2$ : \ligne
+                \item le carré de $9$ : \ligne
+                \item le carré de $12$ : \ligne
+                \item écriture réduite de $5 \times x \times 2 \times x$ : \ligne
+                \item écriture réduite de $ 5 \times x - 2 $ : \ligne
+                \item écriture réduite de $5 \times x - 2 \times x$ : \ligne
+                \item écriture réduite de $ 3a \times 2b$ : \ligne
+                \item écriture réduite de $ 3a + 5b -a$ : \ligne
+
+                \item médiane de la série $ 13 \, ; \, 11 \, ; \, 12 $: \ligne
+                \item médiane de la série $ 14 \, ; \, 7 \, ; \, 13 \, ; \, 8 \, ; \, 7$ : \ligne
+                \item médiane de la série $ 10 \, ; \, 20 \, ; \, 8 \, ; \, 15 \, ; 6$ : \ligne
+                \item écriture décimale de $\dfrac{1}{4}$ : \ligne
+                \item écriture décimale de $\dfrac{1}{2}$ : \ligne
+                \item écriture décimale de $\dfrac{1}{10}$ : \ligne
+                \item écriture décimale de $\dfrac{1}{2}$ : \ligne
+                \item écriture décimale de $\dfrac{1}{5}$ : \ligne
+                \item écriture réduite de $7x + (4 - 2x)$ : \ligne
+                \item écriture réduite de $20 - (7x - 2)$ : \ligne
+            \end{itemize}
+        \end{multicols}
+    \end{exercice}
+\end{Maquette}
+
+
+\end{document}
