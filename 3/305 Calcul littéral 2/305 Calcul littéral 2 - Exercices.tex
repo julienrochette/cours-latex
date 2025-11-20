@@ -1,0 +1,129 @@
+% !TEX program = lualatex
+\documentclass[11pt]{article}
+
+% -------- LuaLaTeX : polices et langue --------
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Tex Gyre Heros}
+%\renewcommand{\familydefault}{\sfdefault} % force le sans serif par défaut
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+% -------- Mise en page --------
+\usepackage[a4paper,margin=1cm]{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+\usepackage[most]{tcolorbox}
+
+% -------- Mathématiques --------
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{icomma}
+% \sisetup{locale=FR}
+
+\usepackage{enumitem}
+\setlist[itemize]{left=0pt}
+\setlist[enumerate]{left=0pt, label=\textbf{\alph*}.}
+
+\usepackage{ProfCollege}
+\usepackage{ProfMaquette}
+
+\usepackage{tabularray}
+
+% -------- Divers --------
+\setlength{\parindent}{0pt}
+\newcommand{\ligne}{{\color{gray!60}\hrulefill}}
+
+\begin{document}
+
+\begin{multicols}{2}
+
+    \begin{Maquette}[Fiche]{Theme=Calcul littéral 2, Niveau=Troisième}
+
+        \begin{exercice}
+        Réduis les quotients suivants :
+        \begin{multicols}{2}
+
+            \begin{enumerate}
+                \item $\dfrac{10x}{6}$
+                \item $\dfrac{15a}{3}$
+                \item $\dfrac{21b}{9}$
+                \item $\dfrac{5x}{5}$
+                \item $\dfrac{28y}{8}$
+                \item $\dfrac{20t}{10}$
+                \item $\dfrac{8x^2}{6}$
+                \item $\dfrac{-15c}{6}$
+                \item $\dfrac{20}{8x}$
+                \item $\dfrac{40a^2}{35a}$
+                \item $\dfrac{10ab}{8bc}$
+            \end{enumerate}
+
+        \end{multicols}
+
+    \end{exercice}
+       
+    \begin{exercice}
+        Réduis les quotients suivants :
+        \begin{multicols}{2}
+            
+            \begin{enumerate}
+                \item $\dfrac{10x + 4}{2}$
+                \item $\dfrac{15 - 20a}{5}$
+                \item $\dfrac{3x+20}{3}$
+                \item $\dfrac{50 + 15t}{5}$
+                \item $\dfrac{5y - 28}{7}$
+                \item $\dfrac{18x - 2}{3}$
+                \item $\dfrac{55x^2 + 33t - 11}{11}$
+                \item $\dfrac{10x - 35}{-5}$
+                \item $\dfrac{-40+28a}{-4}$
+                \item $\dfrac{2}{8+6x}$
+            \end{enumerate}
+        \end{multicols}
+        \end{exercice}
+        \columnbreak
+        \begin{exercice}
+            
+            Le nombre $3$ est-il solution des équations suivantes ?
+            \begin{enumerate}
+                \item $4x+2 = 15$
+                \item[] \ligne
+                \item[] \ligne
+                \item $7-5x = -8$
+                \item[] \ligne
+                \item[] \ligne
+                \item $4x-5 = 3x-1$
+                \item[] \ligne
+                \item[] \ligne
+                \item[] \ligne
+            \end{enumerate}
+
+        \end{exercice}
+
+        \begin{exercice}
+            Récopier et résoudre les équations suivantes.
+            \begin{enumerate}
+                \item $x - 8 = 11$
+                \item $8 x = 22$
+                \item $7 + x = -5$
+                \item $-4 x = 18 $
+                \item $\dfrac{x}{4} = 3,5$
+                \item $- x = 17$
+            \end{enumerate}
+        \end{exercice}
+
+        \begin{exercice}
+            Recopier et résoudre les équations suivantes.
+            \begin{enumerate}
+                \item $2x - 2 = 13$
+                \item $3 z - 10 = 11$
+                \item $37 = 5 x + 6$
+                \item $-2 x + 6 = -10$
+                \item $ 5\times (x - 8) = 52$
+            \end{enumerate}
+        \end{exercice}
+
+    \end{Maquette}
+
+\end{multicols}
+
+\end{document}
