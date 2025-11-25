@@ -1,0 +1,99 @@
+% !TEX program = lualatex
+\documentclass[11pt]{article}
+
+% -------- LuaLaTeX : polices et langue --------
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Tex Gyre Heros}
+%\renewcommand{\familydefault}{\sfdefault} % force le sans serif par défaut
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+% -------- Mise en page --------
+\usepackage[a4paper,margin=1cm]{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+\usepackage[most]{tcolorbox}
+
+% -------- Mathématiques --------
+\usepackage{amsmath,amssymb,mathtools}
+% \usepackage{siunitx}
+% \sisetup{locale=FR}
+
+\usepackage{enumitem}
+\setlist[itemize]{left=0pt}
+\setlist[enumerate]{left=0pt, label=\textbf{\arabic*}.}
+
+\usepackage{ProfCollege}
+\usepackage{ProfMaquette}
+
+%\usepackage{tabularray}
+\usepackage{tabularx}
+
+% -------- Divers --------
+\newcommand{\ligne}{{\color{gray!60}\hrulefill}}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+
+
+\begin{Maquette}[DM]{
+        Numero = 3, Code={}, Date = jeudi 4 décembre 2025, Niveau = Troisième
+    }
+
+ 
+    
+    \begin{exercice}
+        \brm{7}
+        Voici le plan d’un cross (il n’est pas à l’échelle).
+
+        \begin{center}
+            \includegraphics[width=.5\linewidth]{Images/DM3-thales.png}
+        \end{center}
+
+        Les participants partent du point A et se rendent au point E en passant par les points B, C et D.
+
+        C est le point d’intersection des droites (AE) et (BD).
+
+        On sait que AC = \Lg[m]{400}, EC = \Lg[m]{1000} et AB = \Lg[m]{300}.
+
+        \begin{enumerate}
+            \item Calculer BC.
+            \item Justifier pourquoi les droites (AB) et (ED) sont parallèles.
+            \item Montrer que ED = \Lg[m]{750}.
+            \item Déterminer la longueur réelle du parcours ABCDE.
+        \end{enumerate}
+    \end{exercice}
+    
+    \begin{exercice}
+        \brm{8}
+       Le diagramme en bâtons suivant représente la répartition des notes obtenues à un contrôle de mathématiques pour une classe de quatrième. Il n’y avait aucun élève absent le jour du contrôle.
+       
+       \begin{center}
+        \includegraphics[width=.5\linewidth]{Images/DM3.png}
+       \end{center}
+
+       \begin{enumerate}
+        \item Combien y a-t-il d’élèves dans cette classe de quatrième.
+        \item Un élève préntend que la moyenne de la classe s’obtient en calculant
+        
+        \[ \dfrac{8+9+11+12+13+14+16}{7} \]
+
+        Son professeur lui indique que c’est faux car il ne prend pas en compte les effectifs. Effectuer le bon calcul et donner la moyenne de la classe à ce contrôle. Arrondir la réponse au centième d’unité.
+
+        \item Calculer l’étendue de la série de notes de la classe.
+        \item Déterminer la médiane de la série de notes de la classe.
+        \item Calculer le pourcentage d’élèves de la classe ayant obtenu une note supérieure à 10.
+
+
+       \end{enumerate}
+    \end{exercice}
+
+
+\end{Maquette}
+
+
+\end{document}

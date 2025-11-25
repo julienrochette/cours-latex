@@ -1,0 +1,99 @@
+% !TEX program = lualatex
+\documentclass[11pt]{article}
+
+% -------- LuaLaTeX : polices et langue --------
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Tex Gyre Heros}
+%\renewcommand{\familydefault}{\sfdefault} % force le sans serif par défaut
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+% -------- Mise en page --------
+\usepackage[a4paper,margin=1cm]{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+\usepackage[most]{tcolorbox}
+
+% -------- Mathématiques --------
+\usepackage{amsmath,amssymb,mathtools}
+% \usepackage{siunitx}
+% \sisetup{locale=FR}
+
+\usepackage{enumitem}
+\setlist[itemize]{left=0pt}
+\setlist[enumerate]{left=0pt, label=\textbf{\arabic*}.}
+
+\usepackage{ProfCollege}
+\usepackage{ProfMaquette}
+
+%\usepackage{tabularray}
+\usepackage{tabularx}
+
+% -------- Divers --------
+\newcommand{\ligne}{{\color{gray!60}\hrulefill}}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{Maquette}[DM]{
+        Numero = 2, Code={}, Date = lundi 7 décembre, Niveau = Quatrième
+    }
+
+    \begin{exercice}
+        \brm{4}
+         Le diagramme en bâtons suivant représente la répartition des notes obtenues à un contrôle de mathématiques pour une classe de quatrième. Il n’y avait aucun élève absent le jour du contrôle.
+       
+       \begin{center}
+        \includegraphics[width=.45\linewidth]{Images/DM2.png}
+       \end{center}
+
+       \begin{enumerate}
+        \item Combien y a-t-il d’élèves dans cette classe de quatrième.
+        \item Un élève préntend que la moyenne de la classe s’obtient en calculant
+        
+        \[ \dfrac{8+9+11+12+13+14+16}{7} \]
+
+        Son professeur lui indique que c’est faux car il ne prend pas en compte les effectifs. Effectuer le bon calcul et donner la moyenne de la classe à ce contrôle. Arrondir la réponse au centième d’unité.
+        \item Y a-t-il eu plus ou moins de la moitié des élèves qui ont obtenu une note supérieure ou égale à 13 ?
+       \end{enumerate}
+    \end{exercice}
+
+    \begin{exercice}
+        \brm{6}
+        \begin{multicols}{2}
+            Léa veut fabriquer un chapeau en forme de \emph{cône} pour se déguiser en sorcière lors de la fête d’Halloween.
+
+            Voici une représentation en perspective cavalière de ce chapeau.
+
+            Le rayon OM de la base mesure \Lg{9} et la hauteur OS mesure \Lg{30}
+
+            \begin{center}
+                \includegraphics[width=.5\linewidth]{Images/DM2-ex2-figure1.png}
+            \end{center}
+            
+            \begin{enumerate}
+                \item Démontrer que la longueur MS, arrondie au dixième, est environ égale à \Lg{31,3}.
+                \item Léa souhaite vérifier que le chapeau sera adapté à son tour de tête qui mesure \Lg{56}. Parmi les trois grandeurs suivantes, indique celle que doit calculer Léa pour effectuer sa vérification :
+                \begin{itemize}
+                    \item l’aire de la base du cône
+                    \item le périmètre de la base du cône
+                    \item le volume du cône
+                \end{itemize}
+                
+                \item Effectue le calcul pour vérifier si le chapeau sera adapté ou non.
+            \end{enumerate}
+
+            \begin{center}
+                \includegraphics[width=.75\linewidth]{Images/DM2-ex2-figure2.jpg}
+
+                Schéma illustrant la mesure du tour de tête.
+            \end{center}
+        \end{multicols}
+    \end{exercice}
+\end{Maquette}
+
+
+\end{document}
