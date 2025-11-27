@@ -1,0 +1,122 @@
+% !TEX program = lualatex
+\documentclass[11pt]{article}
+
+% -------- LuaLaTeX : polices et langue --------
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Tex Gyre Heros}
+%\renewcommand{\familydefault}{\sfdefault} % force le sans serif par défaut
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+% -------- Mise en page --------
+\usepackage[a4paper,margin=1cm]{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+\usepackage[most]{tcolorbox}
+
+% -------- Mathématiques --------
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{icomma}
+% \sisetup{locale=FR}
+
+\usepackage{enumitem}
+\setlist[itemize]{left=0pt}
+\setlist[enumerate]{left=0pt, label=\textbf{\arabic*}.}
+
+\usepackage{ProfCollege}
+\usepackage{ProfMaquette}
+
+\usepackage{tabularray}
+
+% -------- Divers --------
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{multicols}{2}
+
+    \begin{Maquette}[Fiche]{Theme=Calcul littéral 2, Niveau=Quatrième}
+
+        \begin{exercice}
+            Pour calculer $4 \times 17$, Marie a écrit :
+
+            \[ 4 \times 17 \]
+            \[ 4 \times (10 + 7) \]
+            \[ 4 \times 10 \, \, + \, \, 4 \times 7 \]
+            \[ 40 + 28 \]
+            \[ 68 \]
+
+            \begin{enumerate}
+                \item Utilise le même principe pour calculer :
+                      \begin{itemize}
+                          \item $6 \times 13$
+                          \item $5 \times 31$
+                          \item $8 \times 23$
+                          \item $53 \times 6$
+                      \end{itemize}
+                \item Comment s’appelle la propriété de l’opération $\times$ que Marie a utilisée lors du passage de sa deuxième à sa troisième ligne ?
+                \item Utilise cette propriété pour réduire les expressions littérales suivantes :
+                      \begin{itemize}
+                          \item $\textrm{A} = 5 \times (x + 7)$
+                          \item $\textrm{B} = 2 (4y + 5)$
+                          \item $\textrm{C} = 9 \times ( 2 - a )$
+                          \item $\textrm{D} = x \times (x + 7)$
+                          \item $\textrm{E} = 2x (5 - 4x)$
+                      \end{itemize}
+            \end{enumerate}
+        \end{exercice}
+
+        \begin{exercice}
+            Recopier, développer et réduire.
+            \begin{multicols}{2}
+                \textbf{Série 1}
+                \begin{enumerate}[label=\textbf{\alph*.}]
+                    \item $ 3 \times \left( a+2 \right) $
+                    \item $ 4 \left( 3+x \right) $
+                    \item $ s \times \left( s+2 \right) $
+                    \item $ 3u \left( u+4 \right) $
+                    \item $ 5 \left( 4+a \right) $
+                    \item $ s \left( 3+4s \right) $
+                \end{enumerate}
+                \textbf{Série 2}
+                \begin{enumerate}[label=\textbf{\alph*.}]
+                    \item $ 3 \times \left( 2+3a \right) $
+                    \item $ 2s \left( 2+4s \right) $
+                    \item $ \left( x+3 \right) \times 2 $
+                    \item $ 5 \left( 2+x+y \right) $
+                    \item $ x^2 \times \left( 3x+5 \right) $
+                    \item $ a^2 \left( 3+a \right) $
+                \end{enumerate}
+            \end{multicols}
+        \end{exercice}
+
+        \begin{exercice}
+            Recopier, développer et réduire.
+            \begin{multicols}{2}
+                \textbf{Série 1}
+                \begin{enumerate}[label=\textbf{\alph*.}]
+                    \item $ 2 \times \left( x-3 \right) $
+                    \item $ 3 \times \left( 2s-1 \right) $
+                    \item $ 2m \left( 5-4m \right) $
+                    \item $ 5x \times \left( -2x+3 \right) $
+                    \item $ 3 \times \left( -2-a \right) $
+                    \item $ a \times \left( 2-2a \right) $
+                \end{enumerate}
+                \textbf{Série 2}
+                \begin{enumerate}[label=\textbf{\alph*.}]
+                    \item $ 2 \times \left( 3a+3 \right) $
+                    \item $ 2x \times \left( x-2 \right) $
+                    \item $ -4 \times \left( -3-x \right) $
+                    \item $ -5x \times \left( 4x+3 \right) $
+                    \item $ 5 \times \left( -4+4m \right) $
+                    \item $ -a \times \left( -4a+2 \right) $
+                \end{enumerate}
+            \end{multicols}
+        \end{exercice}
+    \end{Maquette}
+
+\end{multicols}
+
+\end{document}
