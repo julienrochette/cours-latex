@@ -1,0 +1,127 @@
+% !TEX program = lualatex
+\documentclass[11pt]{article}
+
+% -------- LuaLaTeX : polices et langue --------
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Tex Gyre Heros}
+%\renewcommand{\familydefault}{\sfdefault} % force le sans serif par défaut
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+% -------- Mise en page --------
+\usepackage[a4paper,margin=1cm]{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+\usepackage[most]{tcolorbox}
+
+% -------- Mathématiques --------
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{icomma}
+% \sisetup{locale=FR}
+
+\usepackage{enumitem}
+\setlist[itemize]{left=0pt}
+\setlist[enumerate]{left=0pt, label=\textbf{\alph*}.}
+
+\usepackage{ProfCollege}
+\usepackage{ProfMaquette}
+
+\usepackage{tabularray}
+
+% -------- Divers --------
+\newcommand{\ligne}{{\color{gray!60}\hrulefill}}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+
+\begin{Maquette}[Fiche]{Theme=Puissances, Niveau=Quatrième}
+
+    \begin{multicols}{2}
+
+        \begin{exercice}
+            Voici une liste de mots :
+
+            \begin{center}
+                exposant --- puissance --- facteurs --- produit
+            \end{center}
+
+            Recopie chaque phrase en complétant les … à l’aide des mots précédents.
+
+            \begin{enumerate}
+                \item $3^7$ se lit « 3 … 7 ».
+                \item $5^4$ est le … de quatre … tous égaux à 5.
+                \item 8 est l’… de $6^8$.
+                \item Le … de six … égaux s’écrit sous la forme d’une … d’… 6.
+            \end{enumerate}
+        \end{exercice}
+
+        \begin{exercice}
+            Écrire chaque puissance sous la forme du produit correspondant.
+            \begin{multicols}{2}
+                
+                \begin{enumerate}
+                    
+                    \item $3^4$
+                    \item $5^7$
+                    \item $2^3$
+                    \item $1^8$
+                    \item $2,5^3$
+                    \item $13^1$
+                    \item $10^4$
+                    \item $7^5$
+                    \item $(-4)^6$
+                    \item $(-2)^3$
+                \end{enumerate}
+            \end{multicols}
+        \end{exercice}
+
+         \begin{exercice}
+            Calculer de tête, ou avec la calculatrice si c’est nécessaire, et compléter.
+            \begin{multicols}{2}
+                
+                \begin{enumerate}
+                    
+                    \item $3^4 = \ldots$
+                    \item $5^7 = \ldots$
+                    \item $2^3 = \ldots$
+                    \item $1^8 = \ldots$
+                    \item $2,5^3 = \ldots$
+                    \item $13^1 = \ldots$
+                    \item $10^4 = \ldots$
+                    \item $7^5 = \ldots$
+                    \item $(-4)^6 = \ldots$
+                    \item $(-2)^3 = \ldots$
+                \end{enumerate}
+            \end{multicols}
+        \end{exercice}
+
+        \begin{exercice}
+            Léo pensait qu’une puissance d’un nombre négatif était toujours négative. À l’aide de sa calculatrice il a obtenu $(-6)^5 = -7776$ et $(-13)^4 = 28651$.
+            \begin{enumerate}
+                \item Quelle règle permet de savoir si une puissance d’un nombre négatif sera elle-même négative ?
+                \item Sans calculer, entourer les nombres négatifs dans cette liste.
+                \item \begin{multicols}{2}
+                    \begin{itemize}
+                        \item $(-3)^8$
+                        \item $(-15)^9$
+                        \item $(-9)^4$
+                        \item $(-6)^7$
+                        \item $(-88)^{11}$
+                        \item $(-7)^1$
+                        \item $(-9)^0$
+                        \item $(-3)^{13}$
+                        \item $(-12)^2$
+                        \item $-3^4$
+                        
+                    \end{itemize}
+                \end{multicols}
+            \end{enumerate}
+        \end{exercice}
+
+    \end{multicols}
+\end{Maquette}
+
+\end{document}

@@ -1,0 +1,185 @@
+% !TEX program = lualatex
+\documentclass[11pt]{article}
+
+% -------- LuaLaTeX : polices et langue --------
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Tex Gyre Heros}
+%\renewcommand{\familydefault}{\sfdefault} % force le sans serif par défaut
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+% -------- Mise en page --------
+\usepackage[a4paper,margin=1cm]{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+\usepackage[most]{tcolorbox}
+
+% -------- Mathématiques --------
+\usepackage{amsmath,amssymb,mathtools}
+% \usepackage{siunitx}
+% \sisetup{locale=FR}
+
+\usepackage{enumitem}
+\setlist[itemize]{left=0pt}
+\setlist[enumerate]{left=0pt, label=\textbf{\alph*}.}
+
+\usepackage{ProfCollege}
+\usepackage{ProfMaquette}
+
+\usepackage{tabularray}
+%\usepackage{tabularx}
+
+% -------- Divers --------
+\newcommand{\ligne}{{\color{gray!60}\hrulefill}}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+
+
+\begin{Maquette}[IE]{
+        Numero = 3, Code={}, Date = lundi 1\textsuperscript{er}
+ décembre, Theme = Théorème de Thalès / Automatismes, Calculatrice = true
+    }
+
+    \begin{exercice}
+        \brm{3}
+        \begin{multicols}{2}
+            \emph{La figure ci-contre n’est pas à l’échelle. Toutes les longueurs sont exprimées dans une même unité.}
+
+            \begin{itemize}
+                \item[] Déterminer si les triangles ABC et EFD sont semblables ou non.
+                \item[] \ligne
+                \item[] \ligne
+                \item[] \ligne
+                \item[] \ligne
+                \item[] \ligne
+                \item[] \ligne
+                \item[] \ligne
+
+            \end{itemize}
+
+
+            \columnbreak
+
+            \begin{center}
+                \includegraphics[width = .85\linewidth]{Images/Évaluation 3 -semblables2.png}
+            \end{center}
+        \end{multicols}
+    \end{exercice}
+
+    \vspace{.3cm}
+
+    \begin{exercice}
+        \brm{7}
+        \raggedcolumns
+        \begin{multicols}{2}
+            \emph{La figure ci-contre est réalisée à main levée.}
+
+            Les points A, E et D sont alignés, ainsi que les points B, E et C.
+
+            Les droites (AB) et (CD) sont parallèles et on sait que :
+
+            \begin{multicols}{2}
+                \begin{itemize}
+                    \item ED = \Lg{3,6}
+                    \item EB = \Lg{7,2}
+                    \item CD = \Lg{6}
+                    \item AB = \Lg{9}
+                \end{itemize}
+            \end{multicols}
+
+            \columnbreak
+
+            \begin{center}
+                \includegraphics[width=.6\linewidth]{Images/Évaluation 3 - thalès.png}
+            \end{center}
+        \end{multicols}
+        \flushcolumns
+
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item Déterminer la longueur EC.
+                \item[] \ligne
+                \item[] \ligne
+                \item[] \ligne
+                \item[] \ligne
+                \item[] \ligne
+                \item[] \ligne
+                \item[] \ligne
+
+                \item Démontrer que AD = \Lg{9}.
+                \item[] \ligne
+                \item[] \ligne
+                \item[] \ligne
+                \item[] \ligne
+                \item[] \ligne
+                \item[] \ligne
+                \item[] \ligne
+            \end{enumerate}
+        \end{multicols}
+
+    \end{exercice}
+
+    \newpage
+
+    Nom, prénom et classe : \ligne
+
+    \vspace{.5cm}
+
+    \begin{exercice}
+        \brm{10}
+        \begin{itemize}[itemsep=10pt]
+
+            \item écriture réduite de $m \times (2 - 3m)$: \ligne
+            \item écriture réduite de $5x+(-3+2x)$: \ligne
+            \item écriture réduite de $-(10 - 9u) + 3u$: \ligne
+            \item écriture réduite de $(a+3) \times (b+5)$: \ligne
+            \item écriture réduite de $(x-2) \times (y-4)$: \ligne
+            \item décomposition en facteurs premiers de 60 : \ligne
+        \end{itemize}
+        \begin{multicols}{2}
+            \begin{itemize}[itemsep=10pt]
+                \item étendue de $19\,\,;\,\,10\,\,;\,\,17$: \ligne
+                \item médiane de $10 \,\,;\,\, 8 \,\,;\,\, 12 \,\,;\,\, 17$: \ligne
+                \item moyenne de $10 \,\,;\,\,3\,\,;\,\,5$: \ligne
+                \item médiane de $8 \,\,;\,\, 17 \,\,;\,\, 11 \,\,;\,\, 12 \,\,;\,\, 17$: \ligne
+                \item nombre manquant dans $\dfrac{7}{2} = \dfrac{\ldots}{6}$: \ligne
+                      \columnbreak
+                \item $\dfrac{3}{4} + \dfrac{1}{2} =$ \ligne
+                \item $3+\dfrac{2}{11}=$ \ligne
+
+                \item écriture réduite de $\dfrac{10y}{2}$: \ligne
+                \item écriture réduite de $\dfrac{8a}{12}$: \ligne
+                \item écriture réduite de $\dfrac{5x}{20}$: \ligne
+
+            \end{itemize}
+        \end{multicols}
+
+        \begin{tblr}{
+            width = \textwidth,
+            colspec = {|Q[l,8cm]|Q[c,2cm]|Q[c,2cm]|Q[c,2cm]|Q[c,2cm]|},
+            hlines, vlines,
+            row{1} = {font=\bfseries},
+            cell{2-Z}{1-Z} = {valign=m},
+            rowsep = 10pt,  % espace vertical dans toutes les cellules
+            colsep = 5pt,
+            }
+            Question                                                                                                                                 & {\small Réponse A} & {\small Réponse B}     & {\small Réponse C}     & {\small Ta réponse}              \\
+            Lors d’un agrandissement de rapport 3, les aires …                                                                                       & restent inchangées & sont multipliées par 3 & sont multipilées par 9 & \ligne                           \\
+            On pioche un jeton au hasard \begin{center}
+                                             \includegraphics[width=3cm]{Images/Évaluation 3 - proba 1.png}
+                                         \end{center}  la probabilité d’obtenir un jeton bleu vaut …                                                                           & $5$                & $50 \%$                & $0,05$                 & \ligne \\
+            On pioche un jeton au hasard \begin{center}
+                                             \includegraphics[width=2cm]{Images/Évaluation 3 - proba 2.png}
+                                         \end{center}  la probabilité d’obtenir un jeton bleu vaut …                                                                           & $0,6$              & $\dfrac{2}{5}$         & $55 \%$                & \ligne \\
+            Dans un triangle ABC, on a $\widehat{\textrm{A}} = 60^\circ$ et $\widehat{\textrm{B}}=40^\circ$. L’angle $\widehat{\textrm{C}}$ mesure … & $40^\circ$         & $80^\circ$             & $90^\circ$             & \ligne                           \\
+        \end{tblr}
+    \end{exercice}
+\end{Maquette}
+
+
+\end{document}
