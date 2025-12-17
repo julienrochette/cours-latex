@@ -1,0 +1,185 @@
+% !TEX program = lualatex
+\documentclass[11pt]{article} 
+
+% -------- LuaLaTeX : polices et langue --------
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Tex Gyre Heros}
+%\renewcommand{\familydefault}{\sfdefault} % force le sans serif par défaut
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+% -------- Mise en page --------
+\usepackage[a4paper,margin=1cm]{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+\usepackage[most]{tcolorbox}
+
+% -------- Mathématiques --------
+\usepackage{amsmath,amssymb,mathtools}
+% \usepackage{siunitx}
+% \sisetup{locale=FR}
+
+\usepackage{enumitem}
+\setlist[itemize]{left=0pt}
+\setlist[enumerate]{left=0pt, label=\textbf{\alph*}.}
+
+\newcommand{\checkbox}{\(\square\)}
+
+\usepackage{ProfCollege}
+\usepackage{ProfMaquette}
+
+%\usepackage{tabularray}
+\usepackage{tabularx}
+\usepackage{tabularray}
+
+
+% -------- Divers --------
+\newcommand{\ligne}{{\color{gray!60}\hrulefill}}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+
+
+\begin{Maquette}[IE]{
+        Numero = 4, Code={}, Date = jeudi 18 décembre, Theme = Théorème de Pythagore / Puissances , Calculatrice = true
+    }
+
+
+    \begin{multicols}{2}
+
+        \begin{exercice}
+            \brm{3} Rédige les calculs nécessaires pour trouver la longueur manquante dans chaque triangle.
+
+            \begin{enumerate}
+                \item
+                \item[] \begin{center}
+                          \includegraphics[width=.6\linewidth]{Images/Évaluation 4 - Longueur Pythagore 1.png}
+                      \end{center}
+
+                \item
+                \item[] \begin{center}
+                          \includegraphics[width=.6\linewidth]{Images/Évaluation 4 - Longueur Pythagore 2.png}
+                      \end{center}
+
+            \end{enumerate}
+        \end{exercice}
+        \columnbreak
+
+        \begin{exercice} \brm{2}
+            Relie chaque triangle à l’égalité de Pythagore correspondante.
+
+            \begin{tblr}{
+                    colspec = {
+                            Q[l,m,wd=2.5cm]
+                            Q[l,m,wd=.7cm]
+                            Q[l,m,wd=4cm]
+                        },
+                    rulesep = 0pt,
+                    rowsep = 0pt,
+                }
+                \includegraphics[width=\linewidth]{Images/Évaluation 4 - Égalité Pythagore 1.png} & $\bullet$  \newline \newline \newline & $\bullet \quad \textrm{BC}^2 = \textrm{CA}^2 - \textrm{AB}^2 $ \newline \newline \newline \\
+                \includegraphics[width=\linewidth]{Images/Évaluation 4 - Égalité Pythagore 2.png} & $\bullet$ \newline \newline \newline  & $\bullet \quad \textrm{AC}^2 = \textrm{BC}^2 - \textrm{BA}^2 $ \newline \newline \newline \\
+                \includegraphics[width=\linewidth]{Images/Évaluation 4 - Égalité Pythagore 3.png} & $\bullet$  \newline \newline \newline & $\bullet \quad \textrm{AB}^2 = \textrm{CA}^2 + \textrm{CB}^2$ \newline \newline \newline  \\
+            \end{tblr}
+
+        \end{exercice}
+
+    \end{multicols}
+
+    \begin{exercice}
+        \brm{4}
+        Lana a acheté une étagère qu’elle souhaite placer contre un mur dans une pièce dont le plafond à une hauteur de \Lg[m]{2,40}. Voici un schéma de la situation, il n’est pas à l’échelle.
+
+        \begin{center}
+            \includegraphics[width=.8\linewidth]{Images/Évaluation 4 - Étagère.png}
+        \end{center}
+
+        Léa a assemblé l’étagère à plat sur le sol de la pièce ; elle est donc en position 1.
+
+        Vérifie si elle pourra relever l’étagère pour atteindre la position 2 sans toucher le plafond.
+    \end{exercice}
+
+    \newpage
+
+    \begin{multicols}{2}
+        
+        \begin{exercice}
+            \brm{2} Recopie chaque phrase en complétant les pointillés.
+            
+            \begin{enumerate}
+                \item $7^9$ se lit « 7 … 9 ».
+            \item $5^4$ est le … de quatre … tous égaux à 5.
+            \item 6 est l’… de $2^6$.
+        \end{enumerate}
+    \end{exercice}
+    \columnbreak
+    \begin{exercice}
+        \brm{4}
+        Sur une île, des chercheurs ont introduit une espèce de lapins qui se développe très rapidement : chaque mois la population totale est multipliée par 3.
+        \begin{enumerate}
+            \item Par combien la population est-elle multipliée durant une période de deux mois ? Et durant une préiode de cinq mois ? Donne les réponses sous forme de puissances.
+            \item Sachant qu’il y avait initialement 10 lapins, quel était le nombre de lapins après un an ? (on suppose, de manière simpliste, qu’il n’y a eu aucun décès de lapin durant cette période)
+        \end{enumerate}
+    \end{exercice}
+\end{multicols}
+
+
+    \newpage
+
+    Nom, prénom et classe : \ligne
+
+    \vspace{.5cm}
+
+    \begin{exercice}
+        \brm{10}
+        \begin{itemize}[itemsep=10pt]
+
+            \item écriture réduite de $5 \times (3 + m)$: \ligne
+            \item écriture réduite de $4 \times (2x - 3)$: \ligne
+            \item écriture réduite de $b \times (5 + 2b)$: \ligne
+        \end{itemize}
+        \begin{multicols}{2}
+            \begin{itemize}[itemsep=10pt]
+                \item le carré de $12$ : \ligne
+                \item la racine carrée de $100$ : \ligne
+                \item $\sqrt{64}$ : \ligne
+                \item $6^2$ : \ligne
+                \item la racine carrée de $4$ : \ligne
+                      \columnbreak
+                \item étendue de $19\,\,;\,\,10\,\,;\,\,17$: \ligne
+                \item médiane de $8 \,\,;\,\, 17 \,\,;\,\, 11 \,\,;\,\, 12 \,\,;\,\, 17$: \ligne
+                \item médiane de $10 \,\,;\,\, 8 \,\,;\,\, 12 \,\,;\,\, 17$: \ligne
+                \item moyenne de $10 \,\,;\,\,3\,\,;\,\,5$: \ligne
+                \item moyenne de $8 \,\,;\,\,2\,\,;\,\,5\,\,;\,\,3$: \ligne
+            \end{itemize}
+        \end{multicols}
+
+        \begin{tblr}{
+            width = \textwidth,
+            colspec = {|Q[l,8cm]|Q[c,2cm]|Q[c,2cm]|Q[c,2cm]|Q[c,2cm]|},
+            hlines, vlines,
+            row{1} = {font=\bfseries},
+            cell{2-Z}{1-Z} = {valign=m},
+            rowsep = 10pt,  % espace vertical dans toutes les cellules
+            colsep = 5pt,
+            }
+            Question                                                       & {\small Réponse A} & {\small Réponse B} & {\small Réponse C} & {\small Ta réponse}              \\
+            $3^3 = \ldots$                                                 & $9$                & $27$               & $6$                & \ligne                           \\
+            $8^1 = \ldots$                                                 & $8$                & $1$                & $-8$               & \ligne                           \\
+            Lequel de ces nombres est positif ?                            & $(-3)^7$           & $-3^4$             & $(-5)^2$           & \ligne                           \\
+            $7x - (3 - 2x) = \ldots$                                       & $5x - 3$           & $9x - 3$           & $9x + 3$           & \ligne                           \\
+            $5 + (-4x +2) = \ldots$                                        & $4x +7$            & $-4x+3$            & $-4x+7$            & \ligne                           \\
+            On pioche un jeton au hasard \begin{center}
+                                             \includegraphics[width=3cm]{Images/Évaluation 4 - proba 1.png}
+                                         \end{center}  la probabilité d’obtenir un jeton bleu vaut … & $5$                & $50 \%$            & $0,05$             & \ligne \\
+            Le nombre $\sqrt{40}$ est compris entre …                      & $4$ et $5$         & $6$ et $7$         & $10$ et $11$       & \ligne                           \\
+        \end{tblr}
+    \end{exercice}
+\end{Maquette}
+
+
+\end{document}
